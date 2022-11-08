@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Z INDEX   -->
+    <dimen name="z_index_toolbar">8dp</dimen>
+
+    <!-- Spacing -->
+    <dimen name="spacing_xxxl">32dp</dimen>
+    <dimen name="spacing_xxl">28dp</dimen>
+    <dimen name="spacing_xl">24dp</dimen>
+    <dimen name="spacing_lg">20dp</dimen>
+    <dimen name="spacing_md">16dp</dimen>
+    <dimen name="spacing_smm">12dp</dimen>
+    <dimen name="spacing_sm">8dp</dimen>
+    <dimen name="spacing_xsm">6dp</dimen>
+    <dimen name="spacing_xs">4dp</dimen>
+    <dimen name="spacing_xxs">2dp</dimen>
+    <dimen name="spacing_zero">0dp</dimen>
+
+    <!-- Corner Radius   -->
+    <dimen name="corner_radius_small">8dp</dimen>
+    <dimen name="corner_radius_medium">12dp</dimen>
+    <dimen name="corner_radius_large">24dp</dimen>
+</resources>

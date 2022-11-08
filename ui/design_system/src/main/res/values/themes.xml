@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Base" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="background">@color/background_primary</item>
+
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@color/background_primary</item>
+
+        <item name="android:textColor">@color/content</item>
+
+        <item name="colorPrimary">@color/solid_primary</item>
+        <item name="colorAccent">@color/solid_primary</item>
+
+
+        <item name="colorControlNormal">@color/solid_primary</item>
+        <item name="colorControlHighlight">@color/content_10</item>
+
+        <item name="toolbarStyle">@style/Custom.Toolbar</item>
+
+    </style>
+
+    <style name="Custom.Toolbar" parent="Widget.MaterialComponents.Toolbar">
+        <item name="android:background">@color/background_primary</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:includeFontPadding">false</item>
+
+        <item name="titleCentered">true</item>
+        <item name="titleTextColor">@color/content</item>
+
+        <item name="subtitleCentered">true</item>
+        <item name="subtitleTextColor">@color/content_50</item>
+
+        <item name="android:textColorPrimary">@color/content</item>
+        <item name="android:textColorSecondary">@color/content</item>
+        <item name="android:tint">@color/content</item>
+
+        <item name="colorOnPrimary">@color/content</item>
+        <item name="colorOnSecondary">@color/content</item>
+        <item name="navigationIconTint">@color/content</item>
+
+        <item name="materialThemeOverlay">@style/Custom.Toolbar.MaterialThemeOverlay</item>
+    </style>
+
+
+    <style name="Custom.Toolbar.MaterialThemeOverlay" parent="ThemeOverlay.MaterialComponents.Toolbar.Primary">
+        <item name="colorControlNormal">@color/content</item>
+        <item name="actionMenuTextColor">@color/content</item>
+    </style>
+
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+    <style name="MainAppTheme" parent="AppTheme.Base" />
+</resources>

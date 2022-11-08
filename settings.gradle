@@ -1,0 +1,10 @@
+rootProject.name = "Order Manager"
+include ':app'
+include ':domain'
+include ':data'
+include ':feature:order'
+include ':ui:design_system'
+include ':ui:control-kit'
+include ':feature:dashboard'
+include ':di'
+include ':routers'

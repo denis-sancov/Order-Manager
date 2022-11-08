@@ -1,0 +1,50 @@
+import com.sancov.buildsrc.AndroidTarget
+import com.sancov.buildsrc.Libs
+import com.sancov.buildsrc.Module
+
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("dagger.hilt.android.plugin")
+}
+
+android {
+    namespace 'com.sancov.di'
+    compileSdkVersion AndroidTarget.compileSdk
+
+    defaultConfig {
+        minSdkVersion AndroidTarget.minSdk
+        targetSdkVersion AndroidTarget.targetSdk
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = Libs.Kotlin.jvmTarget
+    }
+}
+
+dependencies {
+    coreLibraryDesugaring(Libs.jdkDesugar)
+
+    implementation(Libs.Hilt.implementation)
+    kapt(Libs.Hilt.kapt)
+
+    implementation project(Module.Core.domain)
+    implementation project(Module.Core.data)
+
+    implementation project(Module.routers)
+
+    implementation project(Module.Feature.order)
+}

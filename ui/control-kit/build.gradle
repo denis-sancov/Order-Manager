@@ -1,0 +1,50 @@
+import com.sancov.buildsrc.AndroidTarget
+import com.sancov.buildsrc.Libs
+import com.sancov.buildsrc.Module
+
+plugins {
+    id("com.android.library")
+    id("org.jetbrains.kotlin.android")
+    id("kotlin-parcelize")
+}
+
+android {
+    namespace 'com.sancov.control_kit'
+
+    compileSdkVersion AndroidTarget.compileSdk
+
+    defaultConfig {
+        minSdkVersion AndroidTarget.minSdk
+        targetSdkVersion AndroidTarget.targetSdk
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = Libs.Kotlin.jvmTarget
+    }
+}
+dependencies {
+    coreLibraryDesugaring Libs.jdkDesugar
+
+    implementation project(Module.UI.designSystem)
+
+    implementation Libs.AndroidX.core
+    implementation Libs.AndroidX.AppCompat.core
+
+    implementation Libs.AndroidX.fragment
+    implementation Libs.AndroidX.RecyclerView.implementation
+
+    implementation Libs.AndroidX.Lifecycle.runtime
+
+    implementation Libs.materialDesign
+}

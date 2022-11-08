@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="order_list_title">Orders</string>
+    <string name="order_list_order_number">Order-%d</string>
+
+    <string name="order_details_title">Order Details</string>
+    <string name="status_ready">Ready</string>
+    <string name="status_new">New</string>
+    <string name="status_preparing">Preparing</string>
+    <string name="status_delivered">Delivered</string>
+</resources>

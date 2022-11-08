@@ -1,0 +1,42 @@
+import com.sancov.buildsrc.AndroidTarget
+import com.sancov.buildsrc.Libs
+import com.sancov.buildsrc.Module
+
+plugins {
+    id "com.android.library"
+    id "org.jetbrains.kotlin.android"
+
+    id "kotlin-parcelize"
+    id "kotlin-kapt"
+}
+
+android {
+    namespace "com.sancov.routers"
+
+    compileSdkVersion AndroidTarget.compileSdk
+
+    defaultConfig {
+        minSdkVersion AndroidTarget.minSdk
+        targetSdkVersion AndroidTarget.targetSdk
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = Libs.Kotlin.jvmTarget
+    }
+}
+
+dependencies {
+    implementation Libs.AndroidX.fragment
+    implementation project(Module.Core.domain)
+}

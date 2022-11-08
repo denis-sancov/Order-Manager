@@ -1,0 +1,41 @@
+import com.sancov.buildsrc.AndroidTarget
+import com.sancov.buildsrc.Libs
+
+plugins {
+    id "com.android.library"
+    id "org.jetbrains.kotlin.android"
+}
+
+android {
+    namespace 'com.sancov.domain'
+    compileSdkVersion AndroidTarget.compileSdk
+
+    defaultConfig {
+        minSdkVersion AndroidTarget.minSdk
+        targetSdkVersion AndroidTarget.targetSdk
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = Libs.Kotlin.jvmTarget
+    }
+}
+
+dependencies {
+    coreLibraryDesugaring Libs.jdkDesugar
+
+    implementation Libs.Kotlin.stdlibJdk8
+    implementation Libs.Kotlin.Coroutines.core
+    implementation Libs.Kotlin.Coroutines.android
+}

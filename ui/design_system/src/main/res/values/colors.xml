@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="content">#000000</color>
+    <color name="content_50">#80000000</color>
+    <color name="content_30">#4D000000</color>
+    <color name="content_10">#1A000000</color>
+
+    <color name="background_primary">#FFFFFF</color>
+    <color name="background_secondary">#F2F2F2</color>
+
+    <color name="solid_black">#000000</color>
+    <color name="solid_primary">#DADADA</color>
+
+    <color name="solid_white">#FFFFFF</color>
+
+    <color name="system_menu_border">#ABFFFFFF</color>
+    <color name="system_menu_background">#E6FFFFFF</color>
+    <color name="system_menu_dark_translucent">#99000000</color>
+
+    <!-- API 23 and below   -->
+    <color name="system_menu_fallback">#CC000000</color>
+
+    <!-- Exceptions -->
+    <color name="bottom_navigation_bar_bg_color">#FFFFFF</color>
+
+</resources>
